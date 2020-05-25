@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(https://bonstutoriais.com.br/wp-content/uploads/2018/04/curso-wordpress-850x478.jpg);
+  background-size: auto 100vh;
+  font-family: 'source code pro', monospace;
+  font-size: 10px;
+}
+/* se a tela tiver pelo menos 400px vai carregar esses estilos*/
+@media (min-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  @media (min-width: 800px) {
+  body {
+    font-size: 19px;
+  }
+
+}
+header {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-content: : center;
+}
+h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  top: 0 ;
+  z-index: 1;
+
+}
+
+a {
+  
+  text-decoration: none;
+}
+
+a:hover {
+  color: teal;
+  text-decoration: underline;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around
+}
+.menu li   {
+  list-style: none;
+}
+.menu a {
+  display: block;
+  padding: 10px 20px;
+
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s,color 2s;
+}
+
+.menu a:hover {
+ background-color: #0f0f0f0f ;
+  color: #755df5 ;
+}
+
+.titulo {
+  transform: scale(0.2) translateY(50vh);
+  opacity: 0;
+  animation: 1s ease 500ms animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+}
+.site-subtitle,
+.site-title {
+  text-align: center;
+  color: whitesmoke;
+}
+.site-title {
+  font-size: 4em;
+  font-family: 'Permanent Marker', cursive;
+  margin: 20px;
+}
+.site-subtitle {
+  font-style: italic;
+  font-family: 'press start 2p', cursive;
+  line-height: 1.5em;
+}
+.sobre,
+.contato,
+.RedesSociais {
+    
+    padding: 2em;
+    min-height: 100vh ;
+}
+
+@media (min-width:1200px) {
+  .container {
+ max-width:1200px   
+ margin-left:auto;
+ margin-right: auto ;
+ }
+}
+
+.sobre h2,
+.contato h2,
+.RedesSociais h2 {
+  font-family: 'press start 2p', cursive:
+  color: wthitesmoke;
+  margin-bottom: 1em;
+  font-size: 3em;
+}
+
+.sobre p{
+  font-size: 1.2em;
+  color: white;
+  margin-bottom: 1.4em ;
+  text-indent: 1.4em;
+  text-shadow: 2px 2px #080808;
+}
+
+.sobre a {
+  color: cyan ;
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+.sobre a:hover {
+  background-color: darkgrey ;
+  
+}
+
+.sobre .avatar {
+  float: right;
+  margin-left: 1.7em; 
+}
+.sobre .avatar img {
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+
+}
+@media (max-width:550px) {
+  .sobre .avatar {  
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    float: right;
+  }
+}
+
+.RedesSociais .grid {
+ display: grid;
+ grid-gap: 4em;
+}
+
+@media (min-width: 560px) {
+  .RedesSociais .grid {
+    grid-template-columns: repeat(3,240px);
+    justify-content:center;
+     height: calc(100vh - 8em - 48px) ;
+  }
+
+@media (min-width: 880px) {
+  .RedesSociais .grid {
+    grid-template-columns: repeat(3, 260px);
+    justify-content: center;
+    align-content: normal;
+    height: calc(100vh - 8em - 48px) ;
+  }
+}
+.grid figure {
+ text-align: center;
+
+}
+
+.img-portfolio {
+  height: 230px;
+  object-fit:cover;
+  object-position: left bottom;
+  width: 300px;
+  transition: transform 500ms;
+}
+
+/*.img-portfolio:hover {
+  transform: scale(1.22) rotate(5deg);
+  transition:  1s;
+}*/
+
+.flip-card {
+  
+  perspective: 700px;
+}
+.card {
+  position: relative;
+  
+  transform-style: preserve-3d;
+  transition: transform 1.5s ;
+}
+
+.flip-card:hover .card:hover {
+  transform: rotateY(180deg);
+}
+.card-front, 
+.card-back {
+  backface-visibility: hidden;
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.card-back {
+  display:flex;
+  background-color: white ;
+  height: 180px;
+  width: 100% ;
+  transform: rotateY(180deg);
+}
+
+.conteudo {
+ margin-left: 1px;
+ text-indent: 1em;  
+} 
+
+.contato a {
+  color: black ;
+font-size: 2.5em ;
+transition: text-shadow 1s;
+}
+
+.contato i {
+  color:azure
+}
+.contato a:active,
+.contato a:hover {
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(255,255,255,10);
+}
+
+.contato a:active {
+
+  background-color:rgba(255,255,255,0);
+  color: rgb(26, 11, 250);
+ 
+}
